@@ -51,7 +51,7 @@ class CRAFTRunner(object):
         refine = False
         refiner_model = None
         trained_model_weights = (
-            "/home/adrian/projects/CRAFT-pytorch/craft/craft_mlt_25k.pth"
+            "craft_mlt_25k.pth"
         )
 
         print("Loading weights from checkpoint (" + trained_model_weights + ")")
