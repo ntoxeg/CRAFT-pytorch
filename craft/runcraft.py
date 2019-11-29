@@ -50,9 +50,7 @@ class CRAFTRunner(object):
         self.cuda = torch.cuda.is_available()
         refine = False
         refiner_model = None
-        trained_model_weights = (
-            "craft_mlt_25k.pth"
-        )
+        trained_model_weights = "craft_mlt_25k.pth"
 
         print("Loading weights from checkpoint (" + trained_model_weights + ")")
         if self.cuda:
@@ -112,7 +110,7 @@ class CRAFTRunner(object):
 
         # resize
         img_resized, target_ratio, size_heatmap = resize_aspect_ratio(
-            image, 1280, interpolation=cv2.INTER_LINEAR, mag_ratio=1.5
+            image, 1280 * 2, interpolation=cv2.INTER_LINEAR, mag_ratio=1.5
         )
         ratio_h = ratio_w = 1 / target_ratio
 
